@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+    font-size: 0;
+    color:lightblue;
+}
+
+/* BASICS */
+
+.shirt-box {
+    display:inline-block;
+    width: 30%;
+    margin: 1%;
+    position: relative;
+}
+
+.image-container {
+    height: 400px;
+    width: 100%;
+    border: 3px solid lightblue;
+    text-align: center;
+    border-bottom: none;
+    display: inline-block;
+    position:relative;
+    transform-style: preserve-3d;
+}
+
+img {
+    padding: 7%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    backface-visibility: hidden;
+}
+
+.icon-container {
+    border-right: 3px solid lightblue;
+    height: 40px;
+}
+
+.icon-box {
+    height: 40px;
+    display: inline-block;
+    width: 20%;
+    border: 3px solid lightblue;
+    border-right: none;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 7px;
+}
+
+.label-container {
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+.product-name {
+    display: inline-block;
+    width: 50%;
+    font: 24px Helvetica;
+}
+
+.product-price {
+    display: inline-block;
+    width: 50%;
+    font: 24px Helvetica;
+    text-align: right;
+}
+
+.icon-box:hover {
+    background-color:lightblue;
+    color:white;
+}
+
+.fa {
+    color: lightblue;
+}
+
+/* BUTTON FLIPPING */
+
+.flip-button {
+    position: absolute;
+    z-index: 1;
+    width: 7%;
+    height: 30px;
+    border: 3px solid lightblue;
+    border-right: none;
+    text-align: center;
+    left: 92.5%;
+}
+
+.flip-button i {
+    padding-top: 3px;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 20px;
+}
+
+.flip-button:hover {
+    background:lightblue;
+}
+
+.flip-button:hover > i {
+    color: white;
+}
+
+img.shirt-back {
+    transform: rotateY(180deg);
+}
+
+.flip-button:hover + div {
+    transform: rotateY(180deg);
+}
+
+
+
+
+/* SHIRT SIZES */
+
+.icon-box:nth-child(3) {
+    position: relative;
+}
+
+.hidden {
+    display:none;
+    position: absolute;
+    bottom: 110%;
+    border: 3px solid lightblue;
+    background-color:white;
+    width:100%;
+    border-bottom:none;
+}
+
+.hidden div .fa{
+    font-size: 32px;
+}
+
+.hidden div .fa-4x {
+    font-size:26px;
+}
+
+.hidden div .fa-3x {
+    font-size: 20px;
+}
+
+.hidden div .fa-2x {
+    font-size: 14px;
+}
+
+.icon-box:hover > .fa {
+    color:white;
+}
+
+.icon-box:hover > .hidden {
+    display:block;
+}
+
+.hidden div:hover {
+    background-color:lightblue;
+}
+
+.hidden div:hover > .fa {
+    color: white;
+}
+
+
+
+
+/* SHIRT COLORS */
+
+.icon-box:nth-child(4) {
+    position: relative;
+}
+
+.colors {
+    display: none;
+    position: absolute;
+    bottom: 110%;
+    border: 3px solid lightblue;
+    width: 100%;
+    border-bottom: none;
+    background-color: white;
+    text-align: center;
+}
+
+.icon-box:hover > .colors {
+    display:block;
+}
+
+.pink {
+    height: 30px;
+    width: 40%;
+    background-color:pink;
+    display: inline-block;
+    border-radius:10%;
+    margin: 3px;
+}
+
+.blue {
+    height: 30px;
+    width: 40%;
+    background-color: blue;
+    display: inline-block;
+    border-radius: 10%;
+    margin: 3px;
+}
+
+.orange {
+    height: 30px;
+    width: 40%;
+    background-color: orange;
+    display: inline-block;
+    border-radius: 10%;
+    margin: 3px;
+}
+
+.green {
+    height: 30px;
+    width: 40%;
+    background-color: green;
+    display: inline-block;
+    border-radius: 10%;
+    margin: 3px;
+}
+
+.master-color-blue {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: blue;
+    text-align: center;
+}
+
+.master-color-pink {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: pink;
+    text-align: center;
+}
+
+.master-color-orange {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: orange;
+    text-align: center;
+}
+
+
+/* COLUMN TRANSFORMATION */
+
+@media (max-width: 1046px) {
+    .shirt-box {
+        width: 45%;
+        display:inline-block;
+    }
+}
+
+@media (max-width: 705px) {
+    .shirt-box {
+        width: 45%;
+        display:block;
+        margin: 1% auto;
+    }
+}
